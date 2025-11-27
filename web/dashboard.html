@@ -1,0 +1,37 @@
+<h1 class="text-2xl font-bold mb-6">Dashboard</h1>
+
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+    <div class="bg-white p-4 rounded shadow">
+        <div class="text-sm text-gray-500">Materiais</div>
+        <div id="stats-materials"
+            class="text-2xl font-bold text-amber-700">0</div>
+    </div>
+
+    <div class="bg-white p-4 rounded shadow">
+        <div class="text-sm text-gray-500">Clientes</div>
+        <div id="stats-clients"
+            class="text-2xl font-bold text-amber-700">0</div>
+    </div>
+
+    <div class="bg-white p-4 rounded shadow">
+        <div class="text-sm text-gray-500">Orçamentos</div>
+        <div id="stats-budgets"
+            class="text-2xl font-bold text-amber-700">0</div>
+    </div>
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+    <!-- LEFT CARD -->
+    <div class="bg-white p-4 rounded shadow">
+        <h2 class="font-semibold mb-3">Materiais Mais Usados</h2>
+        <canvas id="chart-materials" height="180"></canvas>
+    </div>
+
+    <!-- RIGHT CARD -->
+    <div class="bg-white p-4 rounded shadow">
+        <h2 class="font-semibold mb-3">Orçamentos por Status</h2>
+        <canvas id="chart-status" height="180"></canvas>
+    </div>
+
+</div>

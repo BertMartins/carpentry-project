@@ -1,0 +1,18 @@
+<h1 class="text-2xl font-bold mb-6">Histórico de Orçamentos</h1>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
+    <input id="history-search" class="border rounded px-3 py-2"
+        placeholder="🔍 Buscar...">
+
+    <select id="history-client" class="border rounded px-3 py-2"></select>
+
+    <select id="history-status" class="border rounded px-3 py-2">
+        <option value>Todos</option>
+        <option value="pending">Pendente</option>
+        <option value="accepted">Aceito</option>
+        <option value="rejected">Rejeitado</option>
+        <option value="negotiating">Em negociação</option>
+    </select>
+</div>
+
+<div id="history-list"></div>

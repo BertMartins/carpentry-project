@@ -1,0 +1,107 @@
+<h1 class="text-2xl font-bold mb-6">Calculadora de Orçamentos</h1>
+
+<!-- FORM PRINCIPAL -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+    <!-- LEFT CARD -->
+    <div class="bg-white p-4 rounded shadow space-y-4">
+
+        <!-- Cliente -->
+        <div>
+            <label class="text-sm text-gray-600">Cliente</label>
+            <select id="calc-client"
+                class="border rounded w-full px-3 py-2"></select>
+        </div>
+
+        <!-- Nome do orçamento -->
+        <div>
+            <label class="text-sm text-gray-600">Nome do Orçamento</label>
+            <input id="calc-project-name"
+                class="border rounded w-full px-3 py-2"
+                placeholder="Ex: Projeto da Cozinha Gourmet">
+        </div>
+
+        <!-- Observações -->
+        <div>
+            <label class="text-sm text-gray-600">Observações</label>
+            <textarea id="calc-notes"
+                class="border rounded w-full px-3 py-2 h-24"
+                placeholder="Notas adicionais..."></textarea>
+        </div>
+
+        <!-- BOTÕES -->
+        <div class="flex gap-2 pt-2">
+            <button id="btn-save-budget"
+                class="bg-green-600 text-white px-4 py-2 rounded">
+                💾 Salvar
+            </button>
+
+            <button id="btn-generate-pdf"
+                class="bg-amber-600 text-white px-4 py-2 rounded">
+                📄 PDF
+            </button>
+
+            <button id="btn-clear-calculator"
+                class="border px-4 py-2 rounded">
+                Limpar
+            </button>
+        </div>
+
+    </div>
+
+    <!-- RIGHT CARD (Projetos + Resumo) -->
+    <div class="space-y-6">
+
+        <!-- PROJETOS -->
+        <div class="bg-white p-4 rounded shadow">
+            <h3 class="font-semibold text-lg mb-3">Projetos</h3>
+
+            <div id="projects-container" class="space-y-4"></div>
+
+            <button id="btn-add-project"
+                class="bg-blue-600 text-white px-4 py-2 rounded mt-4">
+                + Adicionar Projeto
+            </button>
+        </div>
+
+        <!-- RESUMO -->
+        <div class="bg-white p-4 rounded shadow">
+            <h3 class="font-semibold text-lg mb-3">Resumo</h3>
+
+            <div class="grid grid-cols-2 gap-2 text-sm">
+
+                <div class="text-gray-500">Materiais</div>
+                <div id="summary-material"
+                    class="text-right font-medium">0.00</div>
+
+                <div class="text-gray-500">Mão de obra</div>
+                <div id="summary-labor"
+                    class="text-right font-medium">0.00</div>
+
+                <div class="text-gray-500">Adicionais</div>
+                <div id="summary-additionals"
+                    class="text-right font-medium">0.00</div>
+
+                <div class="text-gray-500">Subtotal</div>
+                <div id="summary-subtotal"
+                    class="text-right font-bold">0.00</div>
+
+                <div class="text-gray-500">
+                    Margem (<span id="summary-margin-percent">30</span>%)
+                </div>
+                <div id="summary-margin"
+                    class="text-right font-medium">0.00</div>
+
+                <div class="text-gray-700 font-semibold">TOTAL</div>
+                <div id="summary-total"
+                    class="text-right text-xl font-extrabold text-amber-600">
+                    0.00
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
