@@ -6,46 +6,67 @@
     <div class="bg-white p-4 rounded shadow space-y-4">
         <h3 class="font-semibold mb-2">Empresa</h3>
 
-        <input id="settings-company-name"
-            class="border rounded w-full px-3 py-2"
-            placeholder="Nome da empresa">
-        <input id="settings-phone" class="border rounded w-full px-3 py-2"
-            placeholder="Telefone">
-        <input id="settings-email" class="border rounded w-full px-3 py-2"
-            placeholder="Email">
-        <input id="settings-address" class="border rounded w-full px-3 py-2"
-            placeholder="Endereço">
+        <div>
+            <label class="text-sm text-gray-700">Nome da empresa</label>
+            <input id="settings-company-name"
+                class="border rounded w-full px-3 py-2">
+        </div>
+
+        <div>
+            <label class="text-sm text-gray-700">Telefone</label>
+            <input id="settings-phone" class="border rounded w-full px-3 py-2">
+        </div>
+
+        <div>
+            <label class="text-sm text-gray-700">Email</label>
+            <input id="settings-email" class="border rounded w-full px-3 py-2">
+        </div>
+
+        <div>
+            <label class="text-sm text-gray-700">Endereço</label>
+            <input id="settings-address"
+                class="border rounded w-full px-3 py-2">
+        </div>
     </div>
 
-    <!-- Margens e tema -->
+    <!-- Margens e Tema -->
     <div class="bg-white p-4 rounded shadow space-y-4">
 
         <h3 class="font-semibold mb-2">Margens & Custos</h3>
 
-        <input id="settings-profit-margin" type="number"
-            class="border rounded w-full px-3 py-2" placeholder="Margem (%)">
-        <input id="settings-labor-cost" type="number"
-            class="border rounded w-full px-3 py-2"
-            placeholder="Mão de obra (R$/m²)">
-        <input id="settings-waste" type="number"
-            class="border rounded w-full px-3 py-2" placeholder="Perda (%)">
-        <input id="settings-validity" type="number"
-            class="border rounded w-full px-3 py-2"
-            placeholder="Validade (dias)">
+        <div>
+            <label class="text-sm text-gray-700">Margem (%)</label>
+            <input id="settings-profit-margin" type="number"
+                class="border rounded w-full px-3 py-2"
+                placeholder="Ex: 30">
+        </div>
 
-        <h3 class="font-semibold mb-2">Tema</h3>
+        <div>
+            <label class="text-sm text-gray-700">Mão de obra (R$/m²)</label>
+            <input id="settings-labor-cost" type="number"
+                class="border rounded w-full px-3 py-2"
+                placeholder="Ex: 150">
+        </div>
 
-        <div class="grid grid-cols-3 gap-3">
-            <input id="theme-primary" type="color"
-                class="w-full h-10 border rounded">
-            <input id="theme-secondary" type="color"
-                class="w-full h-10 border rounded">
-            <input id="theme-accent" type="color"
-                class="w-full h-10 border rounded">
+        <div>
+            <label class="text-sm text-gray-700">Perda (%)</label>
+            <input id="settings-waste" type="number"
+                class="border rounded w-full px-3 py-2"
+                placeholder="Ex: 12">
+        </div>
+
+        <div>
+            <label class="text-sm text-gray-700">Validade (dias)</label>
+            <input id="settings-validity" type="number"
+                class="border rounded w-full px-3 py-2"
+                placeholder="Ex: 10">
         </div>
 
         <button id="btn-save-settings"
-            class="bg-amber-600 text-white px-4 py-2 rounded">Salvar</button>
+            class="bg-amber-600 text-white px-4 py-2 rounded mt-2">
+            Salvar
+        </button>
+
     </div>
 
 </div>
