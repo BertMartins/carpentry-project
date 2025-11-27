@@ -1,11 +1,6 @@
 // ============================================================
 // ⚙️ SETTINGS MODULE
 // ============================================================
-// Responsável por:
-// - Carregar configurações da empresa
-// - Salvar alterações
-// - Atualizar tema global
-// ============================================================
 
 import { DB, saveData } from "../core/db.js";
 import { notify } from "../core/ui.js";
@@ -17,6 +12,9 @@ import { notify } from "../core/ui.js";
 export function init() {
     loadSettingsIntoUI();
     attachEvents();
+
+    // aplica o tema imediatamente ao entrar na tela
+    applyTheme();
 }
 
 
@@ -83,11 +81,10 @@ function saveSettings() {
     s.theme.accent = getVal("theme-accent") || s.theme.accent;
 
     applyTheme();
-
     saveData();
+
     notify("Configurações salvas!", "success");
 }
-
 
 
 function getVal(id) {
@@ -108,8 +105,8 @@ function applyTheme() {
     const root = document.documentElement;
     const t = DB.settings.theme;
 
-    root.style.setProperty("--primary", t.primary);
-    root.style.setProperty("--secondary", t.secondary);
-    root.style.setProperty("--accent", t.accent);
+    root.style.setProperty("--primary", t.primary.trim());
+    root.style.setProperty("--secondary", t.secondary.trim());
+    root.style.setProperty("--accent", t.accent.trim());
 }
 
